@@ -1,0 +1,297 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"li",
+				"li"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"darkgr",
+				"darkgray"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"lightbl",
+				"lightskyblue"
+			],
+			[
+				"bod",
+				"border-spacing"
+			],
+			[
+				"padding-",
+				"padding-top"
+			],
+			[
+				"liug",
+				"lightskyblue"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"paddi",
+				"padding-right"
+			],
+			[
+				"gr",
+				"grey"
+			],
+			[
+				"bacok",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"td",
+				"td"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"border-co",
+				"border-collapse"
+			],
+			[
+				"lightg",
+				"lightgrey"
+			],
+			[
+				"ran",
+				"rand()"
+			],
+			[
+				"ec",
+				"echo()"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"a",
+				"a"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Install Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/king_/Downloads/users (1).sql",
+		"/D/XAMPP/htdocs/login/css/homeStyle.css",
+		"/D/XAMPP/htdocs/login/mystyle.css",
+		"/D/XAMPP/htdocs/login/homeStyle.css",
+		"/D/XAMPP/htdocs/login/mystyleTestBLOCK.css",
+		"/D/XAMPP/htdocs/login/logout.php",
+		"/D/XAMPP/htdocs/login/testingBLOCK-INLINE",
+		"/D/XAMPP/htdocs/login/mystyleTESTING.css",
+		"/D/XAMPP/htdocs/login/testing.php",
+		"/D/XAMPP/htdocs/login/functions.php",
+		"/D/XAMPP/htdocs/login/connection.php"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.6
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "login.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
