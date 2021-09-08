@@ -18,3 +18,4 @@ Objective
   3. searching
   4. admin (+ have permission to organize staff's account)
   5. setting (optional)
+  6. profile (optional)
