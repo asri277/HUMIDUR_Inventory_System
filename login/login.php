@@ -72,7 +72,7 @@
 
 				<input id="button"type="submit" value="Login"><br><br>
 
-				<a class="link_button_login" href="signup.php">Register new account!</a><br><br>
+				<a class="link_button_login" href="#">Register new account!</a><br><br>
 				<a class="link_button_login" href="../index.php">Back to Home</a>
 			</form>
 		</div>
