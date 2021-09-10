@@ -1,39 +1,50 @@
+
+<!-- ======================================================================= -->
+
 <table>
   <tr>
     <th>Name</th>
     <th>RAL No</th>
     <th>Size</th>
-    <th>Labuan</th>
-    <th>Brunei</th>
-    <th>Johor Bahru</th>
-    <th>Port Klang</th>
-    <th>Kertih</th>
+    <th>SPC</th>
+
+    <!-- column that extract data direct from database -->
+    <!-- any data update, it will update in real time -->
+    <?php
+      $colomnNum = 0;
+      while($colomnNum < $tLocationCount)
+      {
+        ?>
+          <th> <?php echo $location[$colomnNum];?></th>
+        <?php
+        $colomnNum += 1;
+      }
+    ?>
     <th>Overall Stocks</th>
   </tr>
 
-  <!-- Temporary table -->
+  <!-- table content-->
   <?php
   $rownum = 0;
-  while($rownum <= 10)
+  $colomnNum = 0;
+  while($rownum < $tContentCount)
   {
     ?>
     <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
+      <td> <?php echo $product_name[$colomnNum]; ?> </td>
+      <td> <?php echo $ral_no[$colomnNum] . "(".$color_name[$colomnNum].")"; ?> </td>
+      <td> <?php echo $size[$colomnNum]; ?> </td>
+      <td> <?php echo $spc[$colomnNum]; ?> </td>
     </tr>
     <?php
     $rownum += 1;
+    $colomnNum += 1;
   }
   ?>
 
 </table>
+
+<!-- ======================================================================= -->
 
 <style type="text/css">
   table{
@@ -44,5 +55,9 @@
 
   th,td{
     border: 1px solid #000000;
+  }
+
+  td{
+    padding-left: 5px;
   }
 </style>

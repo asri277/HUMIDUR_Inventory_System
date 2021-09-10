@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function check_login($con)
 {
@@ -18,6 +18,8 @@ function check_login($con)
 	header("Location: login.php");
 	die;
 
+	// close Database
+	mysqli_free_result($result);
 }
 
 function random_num($length)

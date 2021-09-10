@@ -49,6 +49,14 @@ body{
 
 /* -------------------------------------------------------------------------- */
 
+.current_user_session{
+  float: right;
+  display: block;
+  /* margin: top right bottom left  */
+  margin: 5% 1% 0% 0%;
+  padding: 2%;
+}
+
 .any_title{
     float: left;
     /* margin: top right bottom left  */
@@ -75,5 +83,19 @@ body{
   background-color: #FFFFFF;
   /* margin: top right bottom left  */
   margin: 1% auto 2% 1%;
+}
 
+.any_icon{
+  color: #000000;
+  float: right;
+  display: block;
+  /* margin: top right bottom left  */
+  margin: 1% 1% 1% 0%;
+  box-shadow: 0px 1px 2px #404040;
+  padding: 0.5%;
+  transition: 0.3s;
+}
+
+.any_icon:hover{
+  color: blue;
 }

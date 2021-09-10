@@ -1,8 +1,8 @@
 <?php
-session_start();
-
+	session_start();
 	include("../login/connection.php");
 	include("../login/functions.php");
+	include("table_content/table_data_extractor.php");
 
 	$user_data = check_login($con);
 ?>
@@ -12,6 +12,7 @@ session_start();
 	<head>
 		<meta charset="utf-8">
 		<title>HOME</title>
+		<script src="https://kit.fontawesome.com/51f0440eb3.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="homestyle.css">
 	</head>
 
@@ -28,10 +29,14 @@ session_start();
 	<body>
 
 		<h2 class="any_title" >Humidur Stock Summary</h2>
+		<!-- extract data from session for each user -->
+		<h4 class="current_user_session" > User ID: <?php echo $_SESSION['user_id'] ?> </h4>
 
 		<div class="information_container">
-			<h3 class="any_subtitle" > Date: </h3>
+			<h3 class="any_subtitle" > Last Stocks Date: </h3>
 			<?php include("table_content/stock_summary.php") ?>
+
+			<a class="any_icon" href="#"><i class="fas fa-edit"></i></a>
 		</div>
 
 	</body>
