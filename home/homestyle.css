@@ -1,0 +1,79 @@
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  /* margin: top right bottom left  */
+  margin: 0%;
+  padding: 0%;
+}
+
+body{
+  background-color: #E0E0E0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.home_navbar{
+   display: block;
+   background-color: #808080;
+   padding-top: 1%;
+   padding-bottom: 1%;
+   position: fixed;
+   width: 100%;
+   box-shadow: 0px 1px 2px #404040;
+   /* border: 1px solid #000000; */
+ }
+
+ .div_top_navbar_link{
+   overflow: auto;
+   margin-right: 5%;
+ }
+
+ .top_navbar_link{
+    /* border: 1px solid #000000; */
+    text-decoration: none;
+    font-size: 100%;
+    font-family: arial;
+    color: #FFFFFF;
+    background-color: #808080;
+    left: 0%;
+    float: right;
+    padding: 1%;
+    transition: 0.3s;
+  }
+
+  .top_navbar_link:hover{
+    color: #000066;
+  }
+
+/* -------------------------------------------------------------------------- */
+
+.any_title{
+    float: left;
+    /* margin: top right bottom left  */
+    margin: 5% 0% 0% 1%;
+    display: block;
+    padding: 2%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 2px #404040;
+    /* border: 1px solid #000000; */
+  }
+
+.any_subtitle{
+    /* margin: top right bottom left  */
+    margin: 1% 0% 1% 1%;
+  }
+
+.information_container{
+  /* height: 1000px; */
+  /* overflow: auto; */
+  display: block;
+  float: left;
+  box-shadow: 0px 1px 2px #404040;
+  width: 98%;
+  background-color: #FFFFFF;
+  /* margin: top right bottom left  */
+  margin: 1% auto 2% 1%;
+
+}

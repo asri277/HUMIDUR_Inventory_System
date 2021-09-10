@@ -53,5 +53,6 @@
 
   .login_button_index .link_button_index:hover{
     background-color: #FFFFFF;
+    color: blue;
   }
 </style>
