@@ -34,10 +34,15 @@
 
 		<div class="information_container">
 			<h3 class="any_subtitle" > Last Stocks Date: </h3>
-			<?php include("table_content/stock_summary.php") ?>
+
+			<?php include("table_content/stock_summary.php"); ?>
+			<?php include("table_content/stock_location_summary.php"); ?>
 
 			<a class="any_icon" href="#"><i class="fas fa-edit"></i></a>
 		</div>
 
 	</body>
 </html>
+
+<!-- Too improve performance -->
+<?php include("table_content/refresh_array.php"); ?>
