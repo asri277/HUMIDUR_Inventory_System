@@ -16,7 +16,7 @@ body{
 
 .home_navbar{
    display: block;
-   background-color: #808080;
+   background-color: #3333FF;
    padding-top: 1%;
    padding-bottom: 1%;
    position: fixed;
@@ -36,7 +36,7 @@ body{
     font-size: 100%;
     font-family: arial;
     color: #FFFFFF;
-    background-color: #808080;
+    background-color: #3333FF;
     left: 0%;
     float: right;
     padding: 1%;
@@ -44,7 +44,7 @@ body{
   }
 
   .top_navbar_link:hover{
-    color: #000066;
+    color: #FFFF33;
   }
 
 /* -------------------------------------------------------------------------- */
@@ -86,14 +86,51 @@ body{
 }
 
 .any_icon{
+  position: relative;
   color: #000000;
-  float: right;
   display: block;
-  /* margin: top right bottom left  */
-  margin: 1% 1% 1% 0%;
   box-shadow: 0px 1px 2px #404040;
   padding: 0.5%;
   transition: 0.3s;
+}
+
+/* tooltip (pop up after user idle hold their mouse at icon) */
+.any_icon .tooltiptext {
+  visibility: hidden;
+  width: 70px;
+  background-color: #E0E0E0;
+  color: #000000;
+  text-align: center;
+  padding: 2%;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px #404040;
+
+  /* Position the tooltip */
+  position: absolute;
+  right: 120%;
+  z-index: 1;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.any_icon:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+
+#icon_home1{
+  float: right;
+/* margin: top right bottom left  */
+  margin: 0.5% 1% 0% 0%;
+}
+
+#icon_home2{
+  float: right;
+/* margin: top right bottom left  */
+  margin: 1% 1% 1% 0%;
 }
 
 .any_icon:hover{

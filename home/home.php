@@ -33,16 +33,17 @@
 		<h4 class="current_user_session" > User ID: <?php echo $_SESSION['user_id'] ?> </h4>
 
 		<div class="information_container">
+			<a  id="icon_home1" class="any_icon" href="#"> <span class="tooltiptext">Setting</span> <i class="fas fa-edit"></i></a>
 			<h3 class="any_subtitle" > Last Stocks Date: </h3>
 
 			<?php include("table_content/stock_summary.php"); ?>
 			<?php include("table_content/stock_location_summary.php"); ?>
 
-			<a class="any_icon" href="#"><i class="fas fa-edit"></i></a>
+			<a id="icon_home2" class="any_icon" href="#"> <span class="tooltiptext">Setting</span> <i class="fas fa-edit"></i></a>
 		</div>
 
 	</body>
 </html>
 
-<!-- Too improve performance -->
+<!-- To improve performance -->
 <?php include("table_content/refresh_array.php"); ?>
