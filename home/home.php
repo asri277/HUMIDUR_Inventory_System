@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include("table_content/refresh_array.php");
 	include("../login/connection.php");
 	include("../login/functions.php");
 	include("table_content/table_data_extractor.php");
