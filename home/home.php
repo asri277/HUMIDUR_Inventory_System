@@ -12,7 +12,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>HOME</title>
+		<title>Home</title>
 		<script src="https://kit.fontawesome.com/51f0440eb3.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="homestyle.css">
 	</head>
@@ -34,13 +34,13 @@
 		<h4 class="current_user_session" > User ID: <?php echo $_SESSION['user_id'] ?> </h4>
 
 		<div class="information_container">
-			<a  id="icon_home1" class="any_icon" href="#"> <span class="tooltiptext">Setting</span> <i class="fas fa-edit"></i></a>
-			<h3 class="any_subtitle" > Last Stocks Date: </h3>
+			<abbr title="Setting"> <a id="icon_home1" class="any_icon" href="table_content/TC_setting/setting_home.php"> <i class="fas fa-edit"></i> </a> </abbr>
+			<h3 class="any_subtitle" >Last Stocks Date:</h3>
 
 			<?php include("table_content/stock_summary.php"); ?>
 			<?php include("table_content/stock_location_summary.php"); ?>
 
-			<a id="icon_home2" class="any_icon" href="#"> <span class="tooltiptext">Setting</span> <i class="fas fa-edit"></i></a>
+			<abbr title="Setting"> <a id="icon_home2" class="any_icon" href="table_content/TC_setting/setting_home.php"> <i class="fas fa-edit"></i> </a> </abbr>
 		</div>
 
 	</body>

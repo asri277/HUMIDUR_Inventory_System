@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>HUMIDUR INVENTORY SYSTEM</title>
+    <title>Humidur Inventory System</title>
   </head>
   <body>
 

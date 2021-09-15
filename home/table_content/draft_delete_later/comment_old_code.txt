@@ -1,0 +1,39 @@
+
+in HTML
+<span class="tooltiptext">Setting</span>
+<span class="tooltiptext">Setting</span>
+
+<style media="screen">
+/* tooltip (pop up after user idle hold their mouse at icon) */
+  .any_icon .tooltiptext {
+    visibility: hidden;
+    width: 70px;
+    background-color: #E0E0E0;
+    color: #000000;
+    text-align: center;
+    padding: 2%;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px #404040;
+
+    /* Position the tooltip */
+    position: absolute;
+    right: 120%;
+    z-index: 1;
+
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .any_icon:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+
+// The system will get confused when the directory deeply declare. This is the solution.
+<?php
+  set_include_path($_SERVER['DOCUMENT_ROOT']."/HUMIDUR_Inventory_System");
+  include(get_include_path()."/login/connection.php");
+  include(get_include_path()."/login/functions.php");
+ ?>
