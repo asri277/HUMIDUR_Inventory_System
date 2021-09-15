@@ -22,31 +22,92 @@
 
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Color</a>
-        <a href="#">Packaging Size</a>
-        <a href="#">Location</a>
-        <a href="#">Clients</a>
-        <a href="#">Suppliers</a>
+        <a href="#" onclick="openColor()" >Color</a>
+        <a href="#" onclick="openPackaging_size()" >Packaging Size</a>
+        <a href="#" onclick="openLocation()" >Location</a>
+        <a href="#" onclick="openClient()" >Clients</a>
+        <a href="#" onclick="openSupplier()" >Suppliers</a>
       </div>
 
       <div id="table_list" class="nav_container_inside">
         <span class="link_nav_top" style="cursor:pointer" onclick="openNav()">&#9776; Table List</span>
       </div>
-
     </nav>
+
+		<div id="table_color" class="table_design">
+			<?php include("table_color.php"); ?>
+		</div>
+
+		<div hidden id="table_packaging_size" class="table_design">
+			<?php include("table_packaging_size.php"); ?>
+		</div>
+
+		<div hidden id="table_location" class="table_design">
+			<?php include("table_location.php"); ?>
+		</div>
+
+		<div hidden id="table_client" class="table_design">
+			<?php include("table_client.php"); ?>
+		</div>
+
+		<div hidden id="table_supplier" class="table_design">
+			<?php include("table_supplier.php"); ?>
+		</div>
+
   </body>
 </html>
 
 <script>
-  function openNav() {
+  function openNav(){
     document.getElementById("mySidenav").style.width = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
-  function closeNav() {
+  function closeNav(){
     document.getElementById("mySidenav").style.width = "0";
     document.body.style.backgroundColor = "#E0E0E0";
   }
+
+	function openColor(){
+		document.getElementById("table_packaging_size").style.display = "none";
+		document.getElementById("table_color").style.display = "initial";
+		document.getElementById("table_location").style.display = "none";
+		document.getElementById("table_client").style.display = "none";
+		document.getElementById("table_supplier").style.display = "none";
+	}
+
+	function openPackaging_size(){
+		document.getElementById("table_packaging_size").style.display = "initial";
+		document.getElementById("table_color").style.display = "none";
+		document.getElementById("table_location").style.display = "none";
+		document.getElementById("table_client").style.display = "none";
+		document.getElementById("table_supplier").style.display = "none";
+	}
+
+	function openLocation(){
+		document.getElementById("table_packaging_size").style.display = "none";
+		document.getElementById("table_color").style.display = "none";
+		document.getElementById("table_location").style.display = "initial";
+		document.getElementById("table_client").style.display = "none";
+		document.getElementById("table_supplier").style.display = "none";
+	}
+
+	function openClient(){
+		document.getElementById("table_packaging_size").style.display = "none";
+		document.getElementById("table_color").style.display = "none";
+		document.getElementById("table_location").style.display = "none";
+		document.getElementById("table_client").style.display = "initial";
+		document.getElementById("table_supplier").style.display = "none";
+	}
+
+	function openSupplier(){
+		document.getElementById("table_packaging_size").style.display = "none";
+		document.getElementById("table_color").style.display = "none";
+		document.getElementById("table_location").style.display = "none";
+		document.getElementById("table_client").style.display = "none";
+		document.getElementById("table_supplier").style.display = "initial";
+	}
+
 </script>
 
 <style type="text/css">
@@ -109,45 +170,53 @@
 
 /* -------------------------------------------------------------------------- */
 /* Slide Menu Design */
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
 
-.sidenav a {
-  /* margin: top right bottom left  */
-  padding: 20px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #FFFFFF;
-  display: block;
-  font-family: arial;
-  transition: 0.3s;
-}
+  .sidenav a {
+    /* margin: top right bottom left  */
+    padding: 20px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-family: arial;
+    transition: 0.3s;
+  }
 
-.sidenav a:hover {
-  color: #FFFF33;
-}
+  .sidenav a:hover {
+    color: #FFFF33;
+  }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+/* -------------------------------------------------------------------------- */
+	.table_design{
+		float: left;
+		/* margin: top right bottom left  */
+		margin: 10% 10% 10% 120px;
+		border: 1px solid #000000;
+	}
 
 </style>
