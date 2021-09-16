@@ -67,6 +67,10 @@
     padding: 5px 0% 5px 5px;
   }
 
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
   #total_overall_title{
     text-align: right;
     background-color: #CCCCFF;

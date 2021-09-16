@@ -4,12 +4,15 @@
   include("functions.php");
 
 	$user_data = check_login($con);
+
+	include("setting_home_style.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+		<script src="table_responsive.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/51f0440eb3.js" crossorigin="anonymous"></script>
     <title>Table Setting</title>
   </head>
@@ -32,191 +35,36 @@
       <div id="table_list" class="nav_container_inside">
         <span class="link_nav_top" style="cursor:pointer" onclick="openNav()">&#9776; Table List</span>
       </div>
+
+			<h2 id="tt1" class="table_title">Table Color</h2>
+			<h2 hidden id="tt2" class="table_title">Table Packaging Size</h2>
+			<h2 hidden id="tt3" class="table_title">Table Location</h2>
+			<h2 hidden id="tt4" class="table_title">Table Client</h2>
+			<h2 hidden id="tt5" class="table_title">Table Supplier</h2>
+
     </nav>
 
-		<div id="table_color" class="table_design">
+		<div id="table_color" class="container_design">
 			<?php include("table_color.php"); ?>
 		</div>
 
-		<div hidden id="table_packaging_size" class="table_design">
+		<div hidden id="table_packaging_size" class="container_design">
 			<?php include("table_packaging_size.php"); ?>
 		</div>
 
-		<div hidden id="table_location" class="table_design">
+		<div hidden id="table_location" class="container_design">
 			<?php include("table_location.php"); ?>
 		</div>
 
-		<div hidden id="table_client" class="table_design">
+		<div hidden id="table_client" class="container_design">
 			<?php include("table_client.php"); ?>
 		</div>
 
-		<div hidden id="table_supplier" class="table_design">
+		<div hidden id="table_supplier" class="container_design">
 			<?php include("table_supplier.php"); ?>
 		</div>
 
   </body>
 </html>
 
-<script>
-  function openNav(){
-    document.getElementById("mySidenav").style.width = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-  }
-
-  function closeNav(){
-    document.getElementById("mySidenav").style.width = "0";
-    document.body.style.backgroundColor = "#E0E0E0";
-  }
-
-	function openColor(){
-		document.getElementById("table_packaging_size").style.display = "none";
-		document.getElementById("table_color").style.display = "initial";
-		document.getElementById("table_location").style.display = "none";
-		document.getElementById("table_client").style.display = "none";
-		document.getElementById("table_supplier").style.display = "none";
-	}
-
-	function openPackaging_size(){
-		document.getElementById("table_packaging_size").style.display = "initial";
-		document.getElementById("table_color").style.display = "none";
-		document.getElementById("table_location").style.display = "none";
-		document.getElementById("table_client").style.display = "none";
-		document.getElementById("table_supplier").style.display = "none";
-	}
-
-	function openLocation(){
-		document.getElementById("table_packaging_size").style.display = "none";
-		document.getElementById("table_color").style.display = "none";
-		document.getElementById("table_location").style.display = "initial";
-		document.getElementById("table_client").style.display = "none";
-		document.getElementById("table_supplier").style.display = "none";
-	}
-
-	function openClient(){
-		document.getElementById("table_packaging_size").style.display = "none";
-		document.getElementById("table_color").style.display = "none";
-		document.getElementById("table_location").style.display = "none";
-		document.getElementById("table_client").style.display = "initial";
-		document.getElementById("table_supplier").style.display = "none";
-	}
-
-	function openSupplier(){
-		document.getElementById("table_packaging_size").style.display = "none";
-		document.getElementById("table_color").style.display = "none";
-		document.getElementById("table_location").style.display = "none";
-		document.getElementById("table_client").style.display = "none";
-		document.getElementById("table_supplier").style.display = "initial";
-	}
-
-</script>
-
-<style type="text/css">
-
-  *{
-    margin: 0%;
-    padding: 0%;
-  }
-
-  body{
-    background-color: #E0E0E0;
-    transition: background-color .5s;
-  }
-
-  nav{
-    display: block;
-    position: fixed;
-    background-color: #3333FF;
-    /* margin: top right bottom left  */
-    padding: 1% 0% 1% 0%;
-    width: 100%;
-    box-shadow: 0px 1px 2px #404040;
-    /* border: 1px solid #000000; */
-  }
-
-  .nav_container_inside{
-    text-align: center;
-    width: 10%;
-    height: 50px;
-    float: left;
-  }
-
-  .link_nav_top{
-    /* border: 1px solid #000000; */
-    text-decoration: none;
-    font-family: arial;
-    color: #FFFFFF;
-    float: inherit;
-    width: 100%;
-    /* margin: top right bottom left  */
-    padding: 11% 0% 11% 0%;
-    transition: 0.3s;
-  }
-
-  .link_nav_top:hover{
-    color: #FFFF33;
-  }
-
-  #back_to_home{
-    /* margin: top right bottom left  */
-    margin: 0% 1% 0% 1%;
-    /* border: 1px solid #000000; */
-  }
-
-  #table_list{
-    /* margin: top right bottom left  */
-    margin: 0% 1% 0% 1%;
-    /* border: 1px solid #000000; */
-  }
-
-/* -------------------------------------------------------------------------- */
-/* Slide Menu Design */
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-
-  .sidenav a {
-    /* margin: top right bottom left  */
-    padding: 20px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #FFFFFF;
-    display: block;
-    font-family: arial;
-    transition: 0.3s;
-  }
-
-  .sidenav a:hover {
-    color: #FFFF33;
-  }
-
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-/* -------------------------------------------------------------------------- */
-	.table_design{
-		float: left;
-		/* margin: top right bottom left  */
-		margin: 10% 10% 10% 120px;
-		border: 1px solid #000000;
-	}
-
-</style>
+<?php include("TC_refresh_array.php") ?>

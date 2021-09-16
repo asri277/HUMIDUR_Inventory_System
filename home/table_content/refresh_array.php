@@ -7,6 +7,7 @@
   unset($spc);
   unset($rgb_code);
   unset($last_stock);
+  
   unset($slsProduct_name);
   unset($slsRal_no);
   unset($slsColor_name);
