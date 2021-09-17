@@ -31,10 +31,10 @@
 
 ?>
 
-<table class="table_design">
-  <tr>
-    <th>Supplier ID</th>
-    <th>Company Name</th>
+<table id="table_function_supplier" class="table_design">
+  <tr class="header_row_design">
+    <th>ID</th>
+    <th onclick="sortTableString(1,'table_function_supplier')">Company Name</th>
   </tr>
 
   <?php
@@ -42,8 +42,8 @@
     while ($rowCount < $supplierTotalCount) {
       ?>
         <tr>
-          <td> <?php echo $supplierID[$rowCount]; ?> </td>
-          <td> <?php echo $companyName[$rowCount]; ?> </td>
+          <td class="any_ID_column_design"> <?php echo $supplierID[$rowCount]; ?> </td>
+          <td class="any_name_column_design"> <?php echo $companyName[$rowCount]; ?> </td>
         </tr>
       <?php
       $rowCount += 1;

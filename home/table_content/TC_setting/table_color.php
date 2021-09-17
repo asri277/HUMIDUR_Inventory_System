@@ -37,13 +37,13 @@
 
 ?>
 
-<table class="table_design">
-  <tr>
-    <th>ID</th>
-    <th>RAL Number</th>
-    <th>Color Name</th>
-    <th>SPC</th>
-    <th>RGB HEX</th>
+<table id="table_function_color" class="table_design">
+  <tr class="header_row_design">
+    <th >ID</th>
+    <th onclick="sortTableString(1,'table_function_color')" >RAL Number</th>
+    <th onclick="sortTableString(2,'table_function_color')" >Color Name</th>
+    <th onclick="sortTableString(3,'table_function_color')" >SPC</th>
+    <th onclick="sortTableString(4,'table_function_color')" >RGB HEX</th>
   </tr>
 
   <?php
@@ -51,9 +51,9 @@
     while ($rowCount < $colorTotalCount) {
       ?>
         <tr>
-          <td> <?php echo $colorID[$rowCount]; ?> </td>
+          <td class="any_ID_column_design"> <?php echo $colorID[$rowCount]; ?> </td>
           <td> <?php echo $colorRalNo[$rowCount]; ?> </td>
-          <td> <?php echo $colorName[$rowCount]; ?> </td>
+          <td class="any_name_column_design"> <?php echo $colorName[$rowCount]; ?> </td>
           <td> <?php echo $colorSPC[$rowCount]; ?> </td>
           <td> <?php echo $colorRGBHEX[$rowCount]; ?> </td>
         </tr>

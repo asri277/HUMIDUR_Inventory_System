@@ -31,10 +31,10 @@
 
 ?>
 
-<table class="table_design">
-  <tr>
-    <th>Location ID</th>
-    <th>Location Name</th>
+<table id="table_function_location" class="table_design">
+  <tr class="header_row_design">
+    <th>ID</th>
+    <th onclick="sortTableString(1,'table_function_location')">Location Name</th>
   </tr>
 
   <?php
@@ -42,8 +42,8 @@
     while ($rowCount < $locationTotalCount) {
       ?>
         <tr>
-          <td> <?php echo $locationID[$rowCount]; ?> </td>
-          <td> <?php echo $locationName[$rowCount]; ?> </td>
+          <td class="any_ID_column_design"> <?php echo $locationID[$rowCount]; ?> </td>
+          <td class="any_name_column_design"> <?php echo $locationName[$rowCount]; ?> </td>
         </tr>
       <?php
       $rowCount += 1;

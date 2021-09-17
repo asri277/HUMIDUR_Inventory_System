@@ -39,14 +39,14 @@
 
 ?>
 
-<table class="table_design">
-  <tr>
-    <th>Packaging ID</th>
-    <th>Product Name</th>
-    <th>Size</th>
-    <th>Component A</th>
-    <th>Component B</th>
-    <th>Remarks</th>
+<table id="table_function_packaging_size" class="table_design">
+  <tr class="header_row_design">
+    <th>ID</th>
+    <th onclick="sortTableString(1,'table_function_packaging_size')">Product Name</th>
+    <th onclick="sortTableNumber(2,'table_function_packaging_size')">Size</th>
+    <th onclick="sortTableNumber(3,'table_function_packaging_size')">Component A</th>
+    <th onclick="sortTableNumber(4,'table_function_packaging_size')">Component B</th>
+    <th onclick="sortTableString(5,'table_function_packaging_size')">Remarks</th>
   </tr>
 
   <?php
@@ -54,8 +54,8 @@
     while ($rowCount < $packagingSizeTotalCount) {
       ?>
         <tr>
-          <td> <?php echo $packagingSizeID[$rowCount]; ?> </td>
-          <td> <?php echo $packagingSizeName[$rowCount]; ?> </td>
+          <td class="any_ID_column_design"> <?php echo $packagingSizeID[$rowCount]; ?> </td>
+          <td class="any_name_column_design"> <?php echo $packagingSizeName[$rowCount]; ?> </td>
           <td> <?php echo $packagingSizeSize[$rowCount]; ?> </td>
           <td> <?php echo $packagingSizeCA[$rowCount]; ?> </td>
           <td> <?php echo $packagingSizeCB[$rowCount]; ?> </td>

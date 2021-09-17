@@ -110,6 +110,14 @@
 		/* border: 1px solid #000000; */
 	}
 
+  .sort_button_design{
+    float: left;
+    /* margin: top right bottom left  */
+    margin: 1% 0% 1% 1%;
+    padding: 0.5%;
+    box-shadow: 0px 1px 2px #404040;
+  }
+
 	.container_design{
 	  float: left;
 	  box-shadow: 0px 1px 2px #404040;
@@ -137,5 +145,20 @@
 		text-align: center;
 	}
 
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .header_row_design{
+    background-color: #CCCCFF;
+  }
+
+  .any_ID_column_design{
+    width: 50px;
+  }
+
+  .any_name_column_design{
+    text-align: left;
+  }
 
 </style>

@@ -12,6 +12,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+		<script src="table_sorting.js" type="text/javascript"></script>
 		<script src="table_responsive.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/51f0440eb3.js" crossorigin="anonymous"></script>
     <title>Table Setting</title>
@@ -45,22 +46,27 @@
     </nav>
 
 		<div id="table_color" class="container_design">
+			<p><button class="sort_button_design" onclick="sortByID('table_function_color')">Sort by ID</button></p>
 			<?php include("table_color.php"); ?>
 		</div>
 
 		<div hidden id="table_packaging_size" class="container_design">
+			<p><button class="sort_button_design" onclick="sortByID('table_function_packaging_size')">Sort by ID</button></p>
 			<?php include("table_packaging_size.php"); ?>
 		</div>
 
 		<div hidden id="table_location" class="container_design">
+			<p><button class="sort_button_design" onclick="sortByID('table_function_location')">Sort by ID</button></p>
 			<?php include("table_location.php"); ?>
 		</div>
 
 		<div hidden id="table_client" class="container_design">
+			<p><button class="sort_button_design" onclick="sortByID('table_function_client')">Sort by ID</button></p>
 			<?php include("table_client.php"); ?>
 		</div>
 
 		<div hidden id="table_supplier" class="container_design">
+			<p><button class="sort_button_design" onclick="sortByID('table_function_supplier')">Sort by ID</button></p>
 			<?php include("table_supplier.php"); ?>
 		</div>
 
