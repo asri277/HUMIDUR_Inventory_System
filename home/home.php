@@ -14,6 +14,7 @@
 		<meta charset="utf-8">
 		<title>Home</title>
 		<script src="https://kit.fontawesome.com/51f0440eb3.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/120a2d9fdb.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="homestyle.css">
 	</head>
 
@@ -22,6 +23,7 @@
 			<a class="top_navbar_link" href="../login/logout.php">Logout</a>
 			<a class="top_navbar_link" href="#">Report</a>
 			<a class="top_navbar_link" href="#">Expiry Information</a>
+			<a class="top_navbar_link" href="../home/user-setting.php">Settings</a>
 	    <a class="top_navbar_link" href="#">Order Movement</a>
 	    <a class="top_navbar_link" href="../home/home.php">Home</a>
 	  </div>
