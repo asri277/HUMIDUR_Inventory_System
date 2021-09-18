@@ -1,5 +1,5 @@
 <style type="text/css">
-
+/* File Effected: setting_home.php, all table file, all TDM file */
   *{
     margin: 0%;
     padding: 0%;
@@ -58,7 +58,7 @@
   }
 
 /* -------------------------------------------------------------------------- */
-/* Slide Menu Design */
+/* Slide Menu Design File: setting_home.php */
   .sidenav {
     height: 100%;
     width: 0;
@@ -110,7 +110,7 @@
 		/* border: 1px solid #000000; */
 	}
 
-  .sort_button_design{
+  .button_design{
     float: left;
     /* margin: top right bottom left  */
     margin: 1% 0% 1% 1%;
@@ -160,5 +160,77 @@
   .any_name_column_design{
     text-align: left;
   }
+
+/* -------------------------------------------------------------------------- */
+/* File: TDM */
+
+.label_anyForm{
+  /* margin: top right bottom left  */
+  margin: 3% 0% 0% 3%;
+  display: block;
+  color: #FFFFFF;
+  font-family: arial;
+}
+
+.input_anyForm{
+  margin: 0% 0% 0% 3%;
+  display: block;
+  padding: 5px;
+  font-size: 100%;
+  width: 94%;
+}
+
+.btnSubmit_anyForm{
+  /* margin: top right bottom left  */
+  margin: 3% 0% 3% 3%;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0px 1px 2px #404040;
+}
+
+.sideManipulateNav {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sideManipulateNav .closeManipulateBtn {
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #FFFFFF;
+  transition: 0.3s;
+  padding: 20px 8px 8px 32px;
+  font-family: arial;
+}
+
+.sideManipulateNav .closeManipulateBtn:hover {
+  color: #FFFF33;
+}
+
+#table_color {
+  transition: margin-left .5s;
+}
+
+.any_form_container{
+  /* margin: top right bottom left  */
+  margin: 30px 0% 0% 0%;
+  box-shadow: 0px 1px 2px #404040;
+}
+
+@media screen and (max-height: 450px) {
+  .sideManipulateNav {padding-top: 15px;}
+  .sideManipulateNav a {font-size: 18px;}
+}
+
 
 </style>

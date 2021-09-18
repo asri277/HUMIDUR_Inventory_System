@@ -91,6 +91,8 @@ abbr{
 
 .any_icon{
   position: relative;
+  float: right;
+  text-decoration: none;
   color: #000000;
   display: block;
   box-shadow: 0px 1px 2px #404040;
@@ -100,21 +102,20 @@ abbr{
 
 /* -------------------------------------------------------------------------- */
 
+.any_icon:hover{
+  color: blue;
+}
+
 #icon_home1{
-  float: right;
 /* margin: top right bottom left  */
   margin: 0.5% 1% 0% 0%;
 }
 
 #icon_home2{
-  float: right;
 /* margin: top right bottom left  */
   margin: 1% 1% 1% 0%;
 }
 
-.any_icon:hover{
-  color: blue;
-}
 
 /* -------------------------------------------------------------------------- */
                       /*SYED PUNYA*/

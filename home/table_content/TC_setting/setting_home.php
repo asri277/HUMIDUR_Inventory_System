@@ -46,27 +46,31 @@
     </nav>
 
 		<div id="table_color" class="container_design">
-			<p><button class="sort_button_design" onclick="sortByID('table_function_color')">Sort by ID</button></p>
+			<?php include("TC_data_manipulate/TDM_color.php"); ?>
+			<p><button class="button_design" onclick="openManipulateNav('mySideEditNav_color','table_color')">Update Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideAddNav_color','table_color')">Add Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideDeleteNav_color','table_color')">Delete Data</button></p>
+			<p><button class="button_design" onclick="sortByID('table_function_color')">Sort by ID</button></p>
 			<?php include("table_color.php"); ?>
 		</div>
 
 		<div hidden id="table_packaging_size" class="container_design">
-			<p><button class="sort_button_design" onclick="sortByID('table_function_packaging_size')">Sort by ID</button></p>
+			<p><button class="button_design" onclick="sortByID('table_function_packaging_size')">Sort by ID</button></p>
 			<?php include("table_packaging_size.php"); ?>
 		</div>
 
 		<div hidden id="table_location" class="container_design">
-			<p><button class="sort_button_design" onclick="sortByID('table_function_location')">Sort by ID</button></p>
+			<p><button class="button_design" onclick="sortByID('table_function_location')">Sort by ID</button></p>
 			<?php include("table_location.php"); ?>
 		</div>
 
 		<div hidden id="table_client" class="container_design">
-			<p><button class="sort_button_design" onclick="sortByID('table_function_client')">Sort by ID</button></p>
+			<p><button class="button_design" onclick="sortByID('table_function_client')">Sort by ID</button></p>
 			<?php include("table_client.php"); ?>
 		</div>
 
 		<div hidden id="table_supplier" class="container_design">
-			<p><button class="sort_button_design" onclick="sortByID('table_function_supplier')">Sort by ID</button></p>
+			<p><button class="button_design" onclick="sortByID('table_function_supplier')">Sort by ID</button></p>
 			<?php include("table_supplier.php"); ?>
 		</div>
 

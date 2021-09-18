@@ -1,5 +1,5 @@
 function openNav(){
-  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("mySidenav").style.width = "300px";
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
@@ -78,3 +78,15 @@ function openSupplier(){
   document.getElementById("tt5").style.display = "initial";
 }
 // ===========================================================================
+
+function openManipulateNav(sideNav, table){
+  document.getElementById(sideNav).style.width = "400px";
+  document.getElementById(table).style.marginLeft = "400px";
+  document.getElementById(sideNav).style.display = "initial";
+}
+
+function closeManipulateNav(sideNav, table){
+  document.getElementById(sideNav).style.width = "0";
+  document.getElementById(table).style.marginLeft= "1%";
+  document.getElementById(sideNav).style.display = "none";
+}
