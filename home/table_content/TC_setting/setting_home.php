@@ -46,32 +46,48 @@
     </nav>
 
 		<div id="table_color" class="container_design">
-			<?php include("TC_data_manipulate/TDM_color.php"); ?>
 			<p><button class="button_design" onclick="openManipulateNav('mySideEditNav_color','table_color')">Update Data</button></p>
 			<p><button class="button_design" onclick="openManipulateNav('mySideAddNav_color','table_color')">Add Data</button></p>
 			<p><button class="button_design" onclick="openManipulateNav('mySideDeleteNav_color','table_color')">Delete Data</button></p>
 			<p><button class="button_design" onclick="sortByID('table_function_color')">Sort by ID</button></p>
 			<?php include("table_color.php"); ?>
+			<?php include("TC_data_manipulate/TDM_color.php"); ?>
 		</div>
 
 		<div hidden id="table_packaging_size" class="container_design">
+			<p><button class="button_design" onclick="openManipulateNav('mySideEditNav_packaging_size','table_packaging_size')">Update Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideAddNav_packaging_size','table_packaging_size')">Add Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideDeleteNav_packaging_size','table_packaging_size')">Delete Data</button></p>
 			<p><button class="button_design" onclick="sortByID('table_function_packaging_size')">Sort by ID</button></p>
 			<?php include("table_packaging_size.php"); ?>
+			<?php include("TC_data_manipulate/TDM_packaging_size.php"); ?>
 		</div>
 
 		<div hidden id="table_location" class="container_design">
+			<p><button class="button_design" onclick="openManipulateNav('mySideEditNav_location','table_location')">Update Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideAddNav_location','table_location')">Add Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideDeleteNav_location','table_location')">Delete Data</button></p>
 			<p><button class="button_design" onclick="sortByID('table_function_location')">Sort by ID</button></p>
 			<?php include("table_location.php"); ?>
+			<?php include("TC_data_manipulate/TDM_location.php"); ?>
 		</div>
 
 		<div hidden id="table_client" class="container_design">
+			<p><button class="button_design" onclick="openManipulateNav('mySideEditNav_client','table_client')">Update Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideAddNav_client','table_client')">Add Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideDeleteNav_client','table_client')">Delete Data</button></p>
 			<p><button class="button_design" onclick="sortByID('table_function_client')">Sort by ID</button></p>
 			<?php include("table_client.php"); ?>
+			<?php include("TC_data_manipulate/TDM_client.php"); ?>
 		</div>
 
 		<div hidden id="table_supplier" class="container_design">
+			<p><button class="button_design" onclick="openManipulateNav('mySideEditNav_supplier','table_supplier')">Update Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideAddNav_supplier','table_supplier')">Add Data</button></p>
+			<p><button class="button_design" onclick="openManipulateNav('mySideDeleteNav_supplier','table_supplier')">Delete Data</button></p>
 			<p><button class="button_design" onclick="sortByID('table_function_supplier')">Sort by ID</button></p>
 			<?php include("table_supplier.php"); ?>
+			<?php include("TC_data_manipulate/TDM_supplier.php"); ?>
 		</div>
 
   </body>

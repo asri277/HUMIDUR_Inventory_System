@@ -90,3 +90,41 @@ function closeManipulateNav(sideNav, table){
   document.getElementById(table).style.marginLeft= "1%";
   document.getElementById(sideNav).style.display = "none";
 }
+
+// ===========================================================================
+
+function loadData(tableid, id, inputid, btnid){
+  var x, table, rows, columnsCount, selectedID;
+  table = document.getElementById(tableid);
+  selectedID = document.getElementById(id).value;
+  rows = table.rows;
+  columnsCount = table.rows[selectedID].cells.length;
+
+  for (var n = 1; n < columnsCount; n++) {
+    x = rows[selectedID].getElementsByTagName("TD")[n].innerHTML;
+    document.getElementsByClassName(inputid)[n - 1].value = x;
+  }
+
+  var input_anyFormDCount = document.getElementsByClassName(inputid).length;
+  for (var i = 0; i < input_anyFormDCount; i++) {
+    document.getElementsByClassName(inputid)[i].disabled = false;
+  }
+
+  var btnSubmit_anyFormCount = document.getElementsByClassName(btnid).length;
+  for (var i = 0; i < btnSubmit_anyFormCount; i++) {
+    document.getElementsByClassName(btnid)[i].disabled = false;
+  }
+
+}
+
+function disableUpdate(inputid, btnid){
+  var input_anyFormDCount = document.getElementsByClassName(inputid).length;
+  for (var i = 0; i < input_anyFormDCount; i++) {
+    document.getElementsByClassName(inputid)[i].disabled = true;
+  }
+
+  var btnLoadOnlyCount = document.getElementsByClassName(btnid).length;
+  for (var i = 0; i < btnLoadOnlyCount; i++) {
+    document.getElementsByClassName(btnid)[i].disabled = true;
+  }
+}

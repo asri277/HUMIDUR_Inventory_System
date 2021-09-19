@@ -7,24 +7,31 @@
   <div class="any_form_container">
 
     <label class="label_anyForm" for="ID_checked">Select ID: </label>
-    <input class="input_anyForm" type="number" name="ID_checked" value="1"><br>
+    <input id="ID_checked_color" class="input_anyForm" type="number" min="1" name="ID_checked" value="1"><br>
+    <!-- maybe nnti kene buat class and loop js -->
 
-    <label class="label_anyForm" for="ral_number_edit">RAL Number: </label>
-    <input class="input_anyForm" type="text" name="ral_number_edit" value=""><br>
+    <label class="label_anyForm" for="ral_number_manipulate">RAL Number: </label>
+    <input disabled class="input_anyForm iafColor" type="text" name="ral_number_manipulate" value=""><br>
 
-    <label class="label_anyForm" for="color_name_edit">Color Name: </label>
-    <input class="input_anyForm" type="text" name="color_name_edit" value=""><br>
+    <label class="label_anyForm" for="color_name_manipulate">Color Name: </label>
+    <input disabled class="input_anyForm iafColor" type="text" name="color_name_manipulate" value=""><br>
 
-    <label class="label_anyForm" for="spc_edit">SPC: </label>
-    <input class="input_anyForm" type="text" name="spc_edit" value=""><br>
+    <label class="label_anyForm" for="spc_manipulate">SPC: </label>
+    <input disabled class="input_anyForm iafColor" type="text" name="spc_manipulate" value=""><br>
 
-    <label class="label_anyForm" for="rgb_hex_edit">RGB HEX: </label>
-    <input class="input_anyForm" type="text" name="rgb_hex_edit" value=""><br>
+    <label class="label_anyForm" for="rgb_hex_manipulate">RGB HEX: </label>
+    <input disabled class="input_anyForm iafColor" type="text" name="rgb_hex_manipulate" value=""><br>
 
-    <input class="btnSubmit_anyForm" type="submit" name="submit" value="Update">
+    <input hidden type="text" name="table_manipulate" value="color">
+
+    <input disabled class="btnSubmit_anyForm btnLoadOnly_color" type="submit" name="submit" value="Update">
+    <input class="btnSubmit_anyForm" onclick="loadData('table_function_color','ID_checked_color','iafColor','btnLoadOnly_color')" type="button" name="load" value="Load Data" >
+    <input class="btnSubmit_anyForm" onclick="disableUpdate('iafColor','btnLoadOnly_color')" type="reset" name="reset" value="Reset" >
   </div>
 
 </form>
+
+<!-- Unfinished yet ======================================================== -->
 
 <!-- Add Side Nav -->
 <form hidden id="mySideAddNav_color" class="sideManipulateNav" method="post">
@@ -33,20 +40,21 @@
   <div class="any_form_container">
 
     <label class="label_anyForm" for="ID_checked">New ID: </label>
-    <input readonly class="input_anyForm" type="number" name="ID_checked" value="1"><br>
+    <input readonly class="input_anyForm" type="number" min="1" name="ID_checked" value="1"><br>
 
-    <label class="label_anyForm" for="ral_number_edit">RAL Number: </label>
-    <input class="input_anyForm" type="text" name="ral_number_edit" value=""><br>
+    <label class="label_anyForm" for="ral_number_manipulate">RAL Number: </label>
+    <input class="input_anyForm" type="text" name="ral_number_manipulate" value=""><br>
 
-    <label class="label_anyForm" for="color_name_edit">Color Name: </label>
-    <input class="input_anyForm" type="text" name="color_name_edit" value=""><br>
+    <label class="label_anyForm" for="color_name_manipulate">Color Name: </label>
+    <input class="input_anyForm" type="text" name="color_name_manipulate" value=""><br>
 
-    <label class="label_anyForm" for="spc_edit">SPC: </label>
-    <input class="input_anyForm" type="text" name="spc_edit" value=""><br>
+    <label class="label_anyForm" for="spc_manipulate">SPC: </label>
+    <input class="input_anyForm" type="text" name="spc_manipulate" value=""><br>
 
-    <label class="label_anyForm" for="rgb_hex_edit">RGB HEX: </label>
-    <input class="input_anyForm" type="text" name="rgb_hex_edit" value=""><br>
+    <label class="label_anyForm" for="rgb_hex_manipulate">RGB HEX: </label>
+    <input class="input_anyForm" type="text" name="rgb_hex_manipulate" value=""><br>
 
+    <input hidden type="text" name="table_manipulate" value="color">
     <input class="btnSubmit_anyForm" type="submit" name="submit" value="Add">
   </div>
 
@@ -59,7 +67,7 @@
   <div class="any_form_container">
 
     <label class="label_anyForm" for="ID_checked">Selected ID: </label>
-    <input class="input_anyForm" type="number" name="ID_checked" value=""><br>
+    <input class="input_anyForm" type="number" min="1" name="ID_checked" value=""><br>
 
     <input class="btnSubmit_anyForm" type="submit" name="submit" value="Delete">
   </div>

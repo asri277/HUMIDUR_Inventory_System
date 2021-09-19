@@ -127,6 +127,7 @@
 	  /* margin: top right bottom left  */
 	  margin: 8% auto 2% 1%;
 		/* position: relative; */
+    transition: margin-left .5s;
 	}
 
 	.table_design{
@@ -217,9 +218,6 @@
   color: #FFFF33;
 }
 
-#table_color {
-  transition: margin-left .5s;
-}
 
 .any_form_container{
   /* margin: top right bottom left  */
