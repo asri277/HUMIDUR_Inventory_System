@@ -1,7 +1,7 @@
-<?php include("TC_data_manipulate/data_checked.php"); ?>
+<?php //include("TC_data_manipulate/data_checked.php"); ?>
 
 <!-- Update Side Nav -->
-<form hidden id="mySideEditNav_color" class="sideManipulateNav" method="post">
+<form action="TC_data_manipulate/data_checked.php" hidden id="mySideEditNav_color" class="sideManipulateNav" method="post">
   <a href="javascript:void(0)" class="closeManipulateBtn" onclick="closeManipulateNav('mySideEditNav_color','table_color')">&times;</a>
 
   <div class="any_form_container">

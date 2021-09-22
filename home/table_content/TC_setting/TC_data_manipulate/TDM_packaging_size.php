@@ -1,4 +1,4 @@
-<?php include("TC_data_manipulate/data_checked.php"); ?>
+<?php //include("TC_data_manipulate/data_checked.php"); ?>
 
 <!-- Update Side Nav -->
 <form hidden id="mySideEditNav_packaging_size" class="sideManipulateNav" method="post">

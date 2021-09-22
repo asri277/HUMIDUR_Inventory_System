@@ -102,7 +102,7 @@ function loadData(tableid, id, inputid, btnid){
 
   for (var n = 1; n < columnsCount; n++) {
     x = rows[selectedID].getElementsByTagName("TD")[n].innerHTML;
-    document.getElementsByClassName(inputid)[n - 1].value = x;
+    document.getElementsByClassName(inputid)[n - 1].value = x.trim();
   }
 
   var input_anyFormDCount = document.getElementsByClassName(inputid).length;
