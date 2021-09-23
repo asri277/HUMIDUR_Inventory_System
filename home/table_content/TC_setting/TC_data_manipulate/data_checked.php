@@ -1,10 +1,4 @@
-<script type="text/javascript">
-  function popUp(table, id){
-    var message = "Data ID: "+id+"\nTable: "+table+"\nSuccessful Updated!";
-    alert(message);
-    window.location.href = "../setting_home.php";
-  }
-</script>
+<script src="../table_responsive.js" type="text/javascript"></script>
 
 <?php
   include("../../../../login/connection.php");
@@ -47,14 +41,98 @@
               popUp("<?php echo $table; ?>", "<?php echo $id; ?>");
             </script>
           <?php
-          break;
+        break;
 
-          case "packaging_size":
-            echo "ps im done";
-            break;
+        case "packaging_size":
+          $newProductName = trim($_POST['product_name_manipulate']);
+          $newCA = trim($_POST['componentA_manipulate']);
+          $newCB = trim($_POST['componentB_manipulate']);
+          $newRemarksPS = trim($_POST['remarks_manipulate']);
+          $newSize = $newCA + $newCB;
 
-          default:
-            echo "ID selected found!";
+          if (empty($newRemarksPS)) {
+            $editQuery = "UPDATE `$table` SET `product_name` = '$newProductName', `size` = '$newSize',
+                          `component_A_weight` = '$newCA', `component_B_weight` = '$newCB',  `remarks` = NULL
+                          WHERE `$table`.`id` = $id;";
+          }else{
+            $editQuery = "UPDATE `$table` SET `product_name` = '$newProductName', `size` = '$newSize',
+                          `component_A_weight` = '$newCA', `component_B_weight` = '$newCB',  `remarks` = '$newRemarksPS'
+                          WHERE `$table`.`id` = $id;";
+          }
+
+          $innerResult = mysqli_query($con, $editQuery);
+
+          if (!$innerResult) {
+            echo 'Could not run query: ' . mysqli_error();
+            exit;
+          }
+
+          ?>
+            <script type="text/javascript">
+              popUp("<?php echo $table; ?>", "<?php echo $id; ?>");
+            </script>
+          <?php
+        break;
+
+        case "location":
+          $newLocationName = trim($_POST['location_name_manipulate']);
+
+          $editQuery = "UPDATE `$table` SET `location_name` = '$newLocationName' WHERE `$table`.`id` = '$id'";
+
+          $innerResult = mysqli_query($con, $editQuery);
+
+          if (!$innerResult) {
+            echo 'Could not run query: ' . mysqli_error();
+            exit;
+          }
+
+          ?>
+            <script type="text/javascript">
+              popUp("<?php echo $table; ?>", "<?php echo $id; ?>");
+            </script>
+          <?php
+        break;
+
+        case "client":
+          $newClientName = trim($_POST['client_company_name_manipulate']);
+
+          $editQuery = "UPDATE `$table` SET `company_name` = '$newClientName' WHERE `$table`.`id` = '$id'";
+
+          $innerResult = mysqli_query($con, $editQuery);
+
+          if (!$innerResult) {
+            echo 'Could not run query: ' . mysqli_error();
+            exit;
+          }
+
+          ?>
+            <script type="text/javascript">
+              popUp("<?php echo $table; ?>", "<?php echo $id; ?>");
+            </script>
+          <?php
+        break;
+
+        case "supplier":
+          $newSupplierName = trim($_POST['supplier_company_name_manipulate']);
+
+          $editQuery = "UPDATE `$table` SET `company_name` = '$newSupplierName' WHERE `$table`.`id` = '$id'";
+
+          $innerResult = mysqli_query($con, $editQuery);
+
+          if (!$innerResult) {
+            echo 'Could not run query: ' . mysqli_error();
+            exit;
+          }
+
+          ?>
+            <script type="text/javascript">
+              popUp("<?php echo $table; ?>", "<?php echo $id; ?>");
+            </script>
+          <?php
+        break;
+
+        default:
+          echo "ID selected found!";
       }
 
     }else{
@@ -64,7 +142,7 @@
   }else {
     ?>
       <script type="text/javascript">
-        alert(' Please enter the ID to Make a Change! ');
+        alert(' Please enter the valid ID to Make a Change! ');
       </script>
     <?php
   }

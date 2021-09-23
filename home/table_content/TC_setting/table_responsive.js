@@ -128,3 +128,9 @@ function disableUpdate(inputid, btnid){
     document.getElementsByClassName(btnid)[i].disabled = true;
   }
 }
+
+function popUp(table, id){
+  var message = "Data ID: "+id+"\nTable: "+table+"\nSuccessful Updated!";
+  alert(message);
+  window.location.href = "../setting_home.php";
+}
