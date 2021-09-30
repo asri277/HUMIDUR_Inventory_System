@@ -3,12 +3,14 @@
 <?php
   include("../../../../login/connection.php");
 
-  if(!empty($_POST['ID_checked']) && isset($_POST['ID_checked'])){
+  if(!empty($_POST['id_checked']) && isset($_POST['id_checked'])){
 
     $table = trim($_POST['table_manipulate']);
-    $id = trim($_POST['ID_checked']);
+    $id = trim($_POST['id_checked']);
+    $command = trim($_POST['manipulate_command']);
 
-    $query = "SELECT * FROM $table WHERE id = $id ";
+    // $query = "SELECT * FROM $table WHERE id = $id ";
+    $query = "SELECT * FROM $table";
     $result = mysqli_query($con, $query);
 
     if (!$result) {
@@ -25,9 +27,14 @@
           $newSPC = trim($_POST['spc_manipulate']);
           $newRGB = trim($_POST['rgb_hex_manipulate']);
 
-          $editQuery ="UPDATE `$table` SET `ral_no` = '$newRalNum', `color_name` = '$newColorName',
-                      `spc` = '$newSPC', `rgb_code` = '$newRGB'
-                      WHERE `$table`.`id` = $id;";
+          if ($command == "update") {
+            $editQuery = "UPDATE `$table` SET `ral_no` = '$newRalNum', `color_name` = '$newColorName',
+                         `spc` = '$newSPC', `rgb_code` = '$newRGB'
+                         WHERE `$table`.`id` = $id";
+          }elseif ($command == "add") {
+            $editQuery = "INSERT INTO `$table` (`id`, `ral_no`, `color_name`, `spc`, `rgb_code`)
+                          VALUES ('$id', '$newRalNum', '$newColorName', '$newSPC', '$newRGB')";
+          }
 
           $innerResult = mysqli_query($con, $editQuery);
 

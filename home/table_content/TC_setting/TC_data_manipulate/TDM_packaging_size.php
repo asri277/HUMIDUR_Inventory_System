@@ -4,8 +4,8 @@
 
   <div class="any_form_container">
 
-    <label class="label_anyForm" for="ID_checked">Select ID: </label>
-    <input id="ID_checked_packaging_size" class="input_anyForm" type="number" min="1" name="ID_checked" value="1"><br>
+    <label class="label_anyForm" for="id_checked">Select ID: </label>
+    <input id="id_checked_packaging_size" class="input_anyForm" type="number" min="1" name="id_checked" value="1"><br>
 
     <label class="label_anyForm" for="product_name_manipulate">Product Name: </label>
     <input disabled class="input_anyForm iafPackagingSize" type="text" name="product_name_manipulate" value=""><br>
@@ -25,8 +25,8 @@
     <input hidden type="text" name="table_manipulate" value="packaging_size">
 
     <input disabled class="btnSubmit_anyForm btnLoadOnly_packaging_size" type="submit" name="submit" value="Update">
-    <input class="btnSubmit_anyForm" onclick="loadData('table_function_packaging_size','ID_checked_packaging_size','iafPackagingSize','btnLoadOnly_packaging_size')" type="button" name="load" value="Load Data" >
-    <input class="btnSubmit_anyForm" onclick="disableUpdate('iafPackagingSize','btnLoadOnly_packaging_size')" type="reset" name="reset" value="Reset" >
+    <input class="btnSubmit_anyForm" onclick="loadData('table_function_packaging_size','id_checked_packaging_size','iafPackagingSize','btnLoadOnly_packaging_size')" type="button" name="load" value="Load Data" >
+    <input class="btnSubmit_anyForm" onclick="disableUpdate('iafPackagingSize','btnLoadOnly_packaging_size','id_checked_packaging_size')" type="reset" name="reset" value="Reset" >
   </div>
 
 </form>

@@ -114,10 +114,10 @@ function loadData(tableid, id, inputid, btnid){
   for (var i = 0; i < btnSubmit_anyFormCount; i++) {
     document.getElementsByClassName(btnid)[i].disabled = false;
   }
-
+  document.getElementById(id).readOnly = true;
 }
 
-function disableUpdate(inputid, btnid){
+function disableUpdate(inputid, btnid, id){
   var input_anyFormDCount = document.getElementsByClassName(inputid).length;
   for (var i = 0; i < input_anyFormDCount; i++) {
     document.getElementsByClassName(inputid)[i].disabled = true;
@@ -127,6 +127,7 @@ function disableUpdate(inputid, btnid){
   for (var i = 0; i < btnLoadOnlyCount; i++) {
     document.getElementsByClassName(btnid)[i].disabled = true;
   }
+  document.getElementById(id).readOnly = false;
 }
 
 function popUp(table, id){
