@@ -96,25 +96,58 @@
 				dgn implement terus, kalau aq terang direct nnti fhm2 la aq susah nk susun ayat aq XD -->
 
 				<h4 class="any_subtitle" >Username: <?php echo $user_data['username'] ?></h4>
-				<input class="user_setting_input" value="<?php echo $user_data['username'] ?>" type="text" name="username"><br>
+				<input id="editUsername" class="user_setting_input" value="<?php echo $user_data['username'] ?>" type="text" name="username" ><br>
 
 				<h4 class="any_subtitle" >Password:</h4>
-				<input class="user_setting_input" value="<?php echo $user_data['password'] ?>" type="password" name="password"><br>
+				<input class="user_setting_input" value="<?php echo $user_data['password'] ?>" type="password" name="password" id="visiblePass" ><br>
+				<input class="user_setting_input" style="margin-top: 10px;" type="checkbox" onclick="showPassword()">Show Password
 
 				<h4 class="any_subtitle" >Name:</h4>
-				<input class="user_setting_input" value="<?php echo $user_data['name'] ?>" type="text" name="name" size="50"><br>
+				<input id="editName" class="user_setting_input" value="<?php echo $user_data['name'] ?>" type="text" name="name" size="50"><br>
 
 				<h4 class="any_subtitle" >User Type: <?php echo $user_data['user_type'] ?></h4>
 
 				<h4 class="any_subtitle" >Phone Number:</h4>
-				<input class="user_setting_input" value="<?php echo $user_data['phone_number'] ?>" type="text" name="phone_number"><br><br>
+				<input id="editPhoneNumber" class="user_setting_input" value="<?php echo $user_data['phone_number'] ?>" type="text" name="phone_number"><br><br>
 
-				<input class="user_setting_input" id="button" type="submit" value="Save"><br><br>
+				<!-- <input href="javascript:void(0)" class="user_setting_input" onclick="enableEdit()" id="button" type="submit" value="Save"><br><br> -->
+
+				<!-- <input class="user_setting_input" id="button" type="submit" value="Edit" onclick="enableEdit()"><br><br> -->
+
+				<!-- <button class="user_setting_input" type="submit" >Edit</button> -->
+				<button onclick="enableEdit()">Edit</button>
+
 			</form>
 		</div>
 
 		<abbr title="Setting"> <a id="icon_home2" class="any_icon" href="#"> <i class="fas fa-edit"></i> </a> </abbr>
 	</div>
+
+	<script>
+	function showPassword() {
+	  var x = document.getElementById("visiblePass");
+
+	  if (x.type === "password") {
+	    x.type = "text";
+	  } 
+	  else {
+	    x.type = "password";
+	  }
+	}
+
+	function enableEdit() {
+		// var x = document.getElementsById("editUsername");
+		document.getElementById("editUsername").disabled = true;
+		document.getElementById("editPassword").disabled = true;
+		// if (x.disabled == false) {
+		// 	x.disabled = true;
+		// } 
+		// else {
+		// 	x.disabled = false;
+		// }
+	}
+	</script>
+
 
 </body>
 </html>
