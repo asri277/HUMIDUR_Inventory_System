@@ -35,9 +35,9 @@
 			$tempPassword = $password;
 		}
 
-		$tempUserID = user_data['user_id'];
+		$tempUserID = $user_data['user_id'];
 
-		$query = "UPDATE users SET username='$tempUsername',password='$tempPassword' WHERE user_id='$tempUserID'";
+		$query = "UPDATE `users` SET `username` ='$tempUsername',`password` ='$tempPassword' WHERE `users`.`user_id` ='$tempUserID'";
 
 		if ($con->query($query) === TRUE) {
 			header("Location: user-setting.php");
@@ -96,11 +96,13 @@
 				dgn implement terus, kalau aq terang direct nnti fhm2 la aq susah nk susun ayat aq XD -->
 
 				<h4 class="any_subtitle" >Username: <?php echo $user_data['username'] ?></h4>
-				<input id="editUsername" class="user_setting_input" value="<?php echo $user_data['username'] ?>" type="text" name="username" ><br>
+				<input id="editUsername" class="user_setting_input" value="<?php echo $user_data['username'] ?>" type="text" name="username" disabled><br>
 
 				<h4 class="any_subtitle" >Password:</h4>
 				<input class="user_setting_input" value="<?php echo $user_data['password'] ?>" type="password" name="password" id="visiblePass" ><br>
-				<input class="user_setting_input" style="margin-top: 10px;" type="checkbox" onclick="showPassword()">Show Password
+
+				<input class="user_setting_input" style="margin-top: 10px;" type="checkbox" onclick="showPassword()" name="show_password" >
+				<label for="show_password">Show Password</label>
 
 				<h4 class="any_subtitle" >Name:</h4>
 				<input id="editName" class="user_setting_input" value="<?php echo $user_data['name'] ?>" type="text" name="name" size="50"><br>
@@ -114,10 +116,9 @@
 
 				<!-- <input class="user_setting_input" id="button" type="submit" value="Edit" onclick="enableEdit()"><br><br> -->
 
-				<!-- <button class="user_setting_input" type="submit" >Edit</button> -->
-				<button onclick="enableEdit()">Edit</button>
-
+				<input class="user_setting_input" type="submit" name="submit" value="Submit">
 			</form>
+			<button class="user_setting_input" onclick="enableEdit()">Edit</button>
 		</div>
 
 		<abbr title="Setting"> <a id="icon_home2" class="any_icon" href="#"> <i class="fas fa-edit"></i> </a> </abbr>
@@ -129,7 +130,7 @@
 
 	  if (x.type === "password") {
 	    x.type = "text";
-	  } 
+	  }
 	  else {
 	    x.type = "password";
 	  }
@@ -137,11 +138,11 @@
 
 	function enableEdit() {
 		// var x = document.getElementsById("editUsername");
-		document.getElementById("editUsername").disabled = true;
+		document.getElementById("editUsername").disabled = false;
 		document.getElementById("editPassword").disabled = true;
 		// if (x.disabled == false) {
 		// 	x.disabled = true;
-		// } 
+		// }
 		// else {
 		// 	x.disabled = false;
 		// }
